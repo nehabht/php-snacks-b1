@@ -9,16 +9,8 @@ Olimpia Milano - Cantù | 55-60
 
 <?php
 
+
 $partiteMilano = [
-
-    "partita1" => "Milano - Cantù",
-    "partita2" => "Milano - Biella",
-    "partita3" => "Milano - Brescia",
-
-
-];
-
-$risultati = [
     [
         "squadraCasa" => "Milano",
         "squadraOspite" => "Cantù",
@@ -42,3 +34,28 @@ $risultati = [
 
 
 ?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <?php
+    for ($i = 0; $i <= count($partiteMilano) -1; $i++) { ?>
+        <p>
+            <?php echo $partiteMilano[$i]["squadraCasa"] . ' - ' . $partiteMilano[$i]["squadraOspite"] . ' | ' . 
+            $partiteMilano[$i]["punteggioCasa"] . '-' . $partiteMilano[$i]["punteggioOspite"]
+            ?>
+        </p>
+
+        
+    <?php }
+    ?>
+    
+</body>
+</html>
